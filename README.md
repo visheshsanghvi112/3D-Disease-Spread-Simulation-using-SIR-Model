@@ -1,15 +1,15 @@
-# 3D Disease Spread Simulation using SIR Model  
+# 3D Disease Spread Simulation using SIR Model
 
-This project is a **Streamlit-based interactive simulation** of disease spread using the **SIR (Susceptible-Infected-Recovered) model**. It visualizes how infections propagate within a network of individuals based on **real-world contact data**.  
+This project is a **Streamlit-based interactive simulation** of disease spread using the **SIR (Susceptible-Infected-Recovered) model**. It visualizes how infections propagate within a network of individuals based on **real-world contact data**.
 
-## **Features**  
+## **Features**
 ✅ **User-adjustable Parameters:** Control infection probability, recovery probability, and recovery time.  
 ✅ **CSV Input Support:** Upload a dataset with person-to-person contact data.  
 ✅ **SIR Model Simulation:** Tracks disease progression over time.  
 ✅ **3D Visualization:** Interactive Plotly-based 3D network graph of infection spread.  
 ✅ **Time-Series Analysis:** Line plot showing SIR population dynamics.  
 
-## **How It Works**  
+## **How It Works**
 1. **Upload a CSV file** containing columns:  
    - `Person_ID` (Unique ID of the individual)  
    - `Contact_ID` (Person they were in contact with)  
@@ -22,42 +22,39 @@ This project is a **Streamlit-based interactive simulation** of disease spread u
    - A **time-series plot** shows how Susceptible, Infected, and Recovered populations evolve.  
    - **3D Network Graphs** depict the disease spread in real-time.  
 
-## **Installation & Usage**  
-### **1. Clone the Repository**  
+## **Installation & Usage**
+
+### **1. Clone the Repository**
 ```bash
 git clone https://github.com/yourusername/3d-disease-simulation.git
 cd 3d-disease-simulation
-2. Install Dependencies
+```
+
+### **2. Install Dependencies**
 Ensure you have Python installed, then run:
-
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
-3. Run the Simulation
-bash
-Copy
-Edit
-streamlit run app.py
-Technologies Used
-🔹 Python
-🔹 Streamlit
-🔹 NetworkX
-🔹 Plotly
-🔹 Pandas
-🔹 NumPy
+```
 
-Use Cases
-Epidemiology research & analysis
-Educational purposes for understanding disease dynamics
-Simulating the impact of infection control strategies
-Contribute
+### **3. Run the Simulation**
+```bash
+streamlit run app.py
+```
+
+## **Technologies Used**
+🔹 Python  
+🔹 Streamlit  
+🔹 NetworkX  
+🔹 Plotly  
+🔹 Pandas  
+🔹 NumPy  
+
+## **Use Cases**
+- Epidemiology research & analysis  
+- Educational purposes for understanding disease dynamics  
+- Simulating the impact of infection control strategies  
+
+## **Contribute**
 If you'd like to improve this project, feel free to fork the repository, enhance the code, and submit a pull request!
 
-🚀 Let's simulate and understand disease spread better!
-
-typescript
-Copy
-Edit
-
-Save this as `README.md` in your GitHub repository. Let me know if you need any modifications! 🚀
+🚀 Let's simulate and understand disease spread better! 🚀

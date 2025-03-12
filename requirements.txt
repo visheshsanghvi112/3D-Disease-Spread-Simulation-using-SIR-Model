@@ -1,5 +1,6 @@
 streamlit
 networkx
+plotly
 numpy
 matplotlib
 pandas

@@ -1,4 +1,4 @@
-import streamlit as st  
+import streamlit as st   
 import networkx as nx
 import numpy as np
 import pandas as pd
@@ -18,6 +18,22 @@ DAYS_TO_RECOVER = st.sidebar.slider("Days to Recover", 1, 14, 7, 1)
 
 # File uploader for CSV input
 uploaded_file = st.sidebar.file_uploader("Upload CSV file (Person_ID, Contact_ID, Infection_Status, Days_Infected)", type=["csv"])
+
+# Option to use predefined dataset
+use_predefined = st.sidebar.checkbox("Use Predefined Dataset")
+
+# Predefined dataset
+def get_predefined_data():
+    data = {
+        "Person_ID": ["1", "2", "3", "4", "5", "6"],
+        "Name": ["A", "B", "C", "D", "E", "F"],
+        "Age": [25, 30, 35, 40, 45, 50],
+        "City": ["NY", "LA", "SF", "TX", "MI", "FL"],
+        "Contact_ID": ["2", "3", "4", "5", "6", "1"],
+        "Infection_Status": ["Infected", "Susceptible", "Susceptible", "Susceptible", "Susceptible", "Susceptible"],
+        "Days_Infected": [0, 0, 0, 0, 0, 0]
+    }
+    return pd.DataFrame(data)
 
 # Function to create graph
 def create_graph_from_data(df):
@@ -95,7 +111,14 @@ if uploaded_file:
     df.columns = ["Person_ID", "Name", "Age", "City", "Contact_ID", "Infection_Status", "Days_Infected"]
     df["Person_ID"] = df["Person_ID"].astype(str)
     df["Contact_ID"] = df["Contact_ID"].astype(str)
+elif use_predefined:
+    df = get_predefined_data()
+    st.sidebar.success("Using predefined dataset")
+else:
+    st.sidebar.info("Please upload a dataset or select the predefined dataset to start the simulation.")
+    df = None
 
+if df is not None:
     G = create_graph_from_data(df)
     
     if st.sidebar.button("Start Simulation"):
@@ -106,5 +129,3 @@ if uploaded_file:
             st.subheader(f"Day {day+1}")
             st.plotly_chart(plot_3d_network(G, status), key=f"day_{day}")
             time.sleep(0.5)
-else:
-    st.sidebar.info("Please upload a dataset to start the simulation.")

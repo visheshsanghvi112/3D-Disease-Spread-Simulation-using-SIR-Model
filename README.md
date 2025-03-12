@@ -1,6 +1,3 @@
-Here’s your `README.md` file code:
-
-```markdown
 # 3D Disease Spread Simulation using SIR Model  
 
 This project is a **Streamlit-based interactive simulation** of disease spread using the **SIR (Susceptible-Infected-Recovered) model**. It visualizes how infections propagate within a network of individuals based on **real-world contact data**.  
@@ -30,36 +27,37 @@ This project is a **Streamlit-based interactive simulation** of disease spread u
 ```bash
 git clone https://github.com/yourusername/3d-disease-simulation.git
 cd 3d-disease-simulation
-```
+2. Install Dependencies
+Ensure you have Python installed, then run:
 
-### **2. Install Dependencies**  
-Ensure you have Python installed, then run:  
-```bash
+bash
+Copy
+Edit
 pip install -r requirements.txt
-```
-
-### **3. Run the Simulation**  
-```bash
+3. Run the Simulation
+bash
+Copy
+Edit
 streamlit run app.py
-```
+Technologies Used
+🔹 Python
+🔹 Streamlit
+🔹 NetworkX
+🔹 Plotly
+🔹 Pandas
+🔹 NumPy
 
-## **Technologies Used**  
-🔹 **Python**  
-🔹 **Streamlit**  
-🔹 **NetworkX**  
-🔹 **Plotly**  
-🔹 **Pandas**  
-🔹 **NumPy**  
+Use Cases
+Epidemiology research & analysis
+Educational purposes for understanding disease dynamics
+Simulating the impact of infection control strategies
+Contribute
+If you'd like to improve this project, feel free to fork the repository, enhance the code, and submit a pull request!
 
-## **Use Cases**  
-- **Epidemiology research & analysis**  
-- **Educational purposes** for understanding disease dynamics  
-- **Simulating the impact of infection control strategies**  
+🚀 Let's simulate and understand disease spread better!
 
-## **Contribute**  
-If you'd like to improve this project, feel free to **fork the repository**, enhance the code, and submit a **pull request!**  
-
-🚀 **Let's simulate and understand disease spread better!**  
-```
+typescript
+Copy
+Edit
 
 Save this as `README.md` in your GitHub repository. Let me know if you need any modifications! 🚀
